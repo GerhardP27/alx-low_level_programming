@@ -24,6 +24,7 @@ int main(void)
 		{	
 			printf("%lu, ", j);
 		}
+
 		k = j;
 		j += i;
 		i = k;
