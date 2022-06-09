@@ -12,8 +12,8 @@ void print_line(int n)
 	int i;
 
 	if (n < 1)
-	{	
-	_putchar('\n');
+	{
+		_putchar('\n');
 	}
 	else
 	{
