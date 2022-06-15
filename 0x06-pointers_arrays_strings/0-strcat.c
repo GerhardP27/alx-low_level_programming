@@ -1,23 +1,23 @@
 #include "main.h"
 
 /**
- * _memset - function with 3 arguments
- * @s: char type pointer 1st argument
- * @b: char type 2nd argument
- * @n: int type unsigned 3rd argument
- * Description: fills memory with a constant bye
- * Return: a pointer to the memory area
+* strcat - Concatenates the string pointed to by @src, including the terminating
+ *          null byte, to the end of the string pointed to by @dest.
+ * @dest: A pointer to the string to be concatenated upon.
+ * @src: The source string to be appended to @dest.
+ *
+ * Return: A pointer to the destination string @dest.
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *strcat(char *dest, const char *src)
 {
-	unsigned int i;
+	int index = 0, dest_len = 0;
 
-	i = 0;
-	while (i < n)
-	{
-		s[i] = b;
-		i++;
-	}
-	return (s);
+	while (dest[index++])
+		dest_len++;
+
+	for (index = 0; src[index]; index++)
+		dest[dest_len++] = src[index];
+
+	return (dest);
 }
