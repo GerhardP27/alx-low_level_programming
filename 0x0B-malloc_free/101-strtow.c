@@ -51,12 +51,13 @@ int count_words(char *str)
 }
 
 /**
- * strx tow - Splits a string into words.
+ * strtow - Splits a string into words.
  * @str: The string to be split.
  *
  * Return: If str = NULL, str = "", or the function fails - NULL.
  *         Otherwise - a pointer to an array of strings (words).
  */
+
 char **strtow(char *str)
 {
 	char **strings;
