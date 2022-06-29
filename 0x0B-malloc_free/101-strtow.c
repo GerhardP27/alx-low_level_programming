@@ -47,7 +47,7 @@ int count_words(char *str)
 		}
 	}
 
-	return(words);
+	return (words);
 }
 
 /**
