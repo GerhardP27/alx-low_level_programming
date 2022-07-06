@@ -14,10 +14,10 @@ int (*get_op_func(char *s))(int, int)
 	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
-		{"*", _mul},
+		{"*", op_mul},
 		{"/", op_div},
 		{"%", op_mod},
-		{N opULL, NULL}
+		{NULL, NULL}
 	};
 	int i = 0;
 
