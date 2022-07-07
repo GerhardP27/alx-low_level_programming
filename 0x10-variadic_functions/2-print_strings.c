@@ -1,41 +1,37 @@
-#include "variadic_functions.h"
-#include <stdio.h>
-#include <stdlib.h>
 #include <stdarg.h>
-
+#include <stdio.h>
+#include "variadic_functions.h"
 /**
- * print_strings - prints parameter-n ,' ' (0..n)-times
- * @separator: comma space value between parameters
- * @n: number of parameters
- * Return: none
+ * print_strings - Entry Point
+ * @separator: comma space
+ * @n: number of elements
+ * Return: void
  */
-
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i = 0;
-	va_list list;
-	char *pmtr;
+	va_list valist;
+	unsigned int i;
+	char *str;
 
-	/* set pointer to start of stream*/
-	va_start(list, n);
+	if (separator == NULL)
+		return;
 
-	while (i < n)
+	va_start(valist, n);
+
+	for (i = 0; i < n; i++)
 	{
-		/* pmr gets set to pointer + sizeof(type)t */
-		pmtr = va_arg(list, char *);
-
-		/* check for parameter stream */
-		if (pmtr)
-			printf("%s", pmtr);
-
-		else
-			printf("(nil)");
-
-		/* ensure no separator at end of stream */
-		if ((separator != '\0') && (i < n - 1))
+		str = va_arg(valist, char *);
+		if (str == NULL)
+		{
+			str = "(nil)";
+		}
+		printf("%s", str);
+		if (i != (n - 1))
+		{
 			printf("%s", separator);
-		i++;
+		}
 	}
 	printf("\n");
-	va_end(list);
+
+	va_end(valist);
 }
