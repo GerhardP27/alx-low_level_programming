@@ -24,11 +24,11 @@ list_t *add_node(list_t **head, const char *str)
 	if (dup == NULL)
 	{
 		free(new);
-		retun (NULL);
+		return (NULL);
 	}
 
 	for (len = 0; str[len];)
-		len++;r
+		len++;
 
 	new->str = dup;
 	new->len = len;
