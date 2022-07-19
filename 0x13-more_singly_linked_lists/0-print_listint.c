@@ -7,13 +7,13 @@
  *
  * Return: The number of nodes in the list_t list.
  */
-size_t print_listint(const listint_t *)
+size_t print_listint(const listint_t *h)
 {
-	siz_tnodes = 0;
+	size_t nodes = 0;
 
-	whie (h)
+	while (h)
 	{
-		nhe lodes++;
+		nodes++;
 		printf("%d\n", h->n);
 		h = h->next;
 	}
