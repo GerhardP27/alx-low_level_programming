@@ -8,6 +8,6 @@ void __attribute__((constructor)) hare(void);
  */
 void hare(void)
 {
-	fprintf(stdout,"You're beat! and yet, you must allow,\n"
-			"I bore my house up on my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
