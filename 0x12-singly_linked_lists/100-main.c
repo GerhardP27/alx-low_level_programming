@@ -9,4 +9,8 @@ int main(void)
 {
     printf("(A tortoise, having pretty good sense of a hare's nature, challenges one to a race.)\n");
     return (0);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f61d3cbbfe43d8a75986511656cc56421ba28150
